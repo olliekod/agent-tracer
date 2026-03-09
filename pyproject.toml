@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-tracer"
+version = "0.1.0"
+description = "Crash dumps for AI agents — record and replay LLM interactions"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+dependencies = []
+
+[project.optional-dependencies]
+openai = ["openai>=1.0"]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+tracer = "tracer.cli:main"
+
+[tool.setuptools]
+packages = ["tracer", "tracer.adapters"]

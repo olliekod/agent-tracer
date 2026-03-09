@@ -1,0 +1,31 @@
+{
+  "run_id": "1e64395d1f6f",
+  "provider": "openai",
+  "steps": [
+    {
+      "step": 1,
+      "model": "gpt-4",
+      "input": {
+        "messages": []
+      },
+      "parameters": {},
+      "output": {
+        "text": "a"
+      },
+      "timestamp": "2026-03-09T19:55:38.335314+00:00"
+    },
+    {
+      "step": 2,
+      "model": "gpt-4",
+      "input": {
+        "messages": []
+      },
+      "parameters": {},
+      "output": {
+        "text": "b"
+      },
+      "timestamp": "2026-03-09T19:55:38.335325+00:00"
+    }
+  ],
+  "final_output": "b"
+}
