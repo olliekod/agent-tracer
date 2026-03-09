@@ -9,7 +9,7 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
-_SUPPORTED_PROVIDERS = ("openai",)
+_SUPPORTED_PROVIDERS = ("openai", "anthropic")
 _CONTENT_TRUNCATE = 200  # chars before truncating message content in output
 
 
@@ -123,6 +123,9 @@ def _load_adapter(provider: str):
     """Return the patch() function for the given provider."""
     if provider == "openai":
         from tracer.adapters.openai_adapter import patch
+        return patch
+    if provider == "anthropic":
+        from tracer.adapters.anthropic_adapter import patch
         return patch
     supported = ", ".join(_SUPPORTED_PROVIDERS)
     print(
